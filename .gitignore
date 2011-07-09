@@ -2,3 +2,4 @@ stacktrace.log
 target/
 target/test-reports/TESTS-TestSuites.xml
 target/*
+.DS_Store
