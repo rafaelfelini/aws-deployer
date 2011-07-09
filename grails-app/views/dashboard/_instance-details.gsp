@@ -1,5 +1,5 @@
 <p>
-	Details for <strong>${instance.imageId}</strong>
+	Details for <strong>${instance.instanceId}</strong>
 </p>
 <ul>
 	<li><strong>Architecture: </strong>${instance.architecture}</li>
