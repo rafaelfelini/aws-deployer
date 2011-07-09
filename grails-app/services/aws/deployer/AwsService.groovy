@@ -56,7 +56,7 @@ class AwsService {
 								rootDeviceType: i.rootDeviceType, 
 								securityGroups: i.securityGroups.collect { it.groupName }, 
 								state: i.state.name, 
-								tags: i.tags.collect { "${it.key}:${it.value}" }]
+								tags: i.tags.collect { "${it.key}=${it.value}" }]
 			}
 		}
 		

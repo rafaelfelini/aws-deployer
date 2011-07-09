@@ -1,0 +1,46 @@
+div#pageBody h1 { background-color: #48802c; color: #ffffff; text-align: center; padding-top: 5px; padding-bottom: 5px; font-size: 22px; text-transform: uppercase; }
+
+div.column { border: 1px solid #ccc; margin-top: 5px; padding: 5px; float: left; margin-right: 5px; }
+div.column div.title { font-size: 16px; margin-bottom: 10px; border-bottom: 1px solid #ccc; text-align: center; background-color: #aaa; color: #fff; padding-top: 4px; padding-bottom: 4px;}
+div.column.last { margin-right: 0px; }
+
+div#left-column { width: 20%; padding-bottom: 10px; }
+div#left-column div.instance-details { padding-left: 10px; }
+div#left-column div.instance-details > span { margin-right: 5px; }
+div#left-column div.instance-details > span > img { vertical-align: middle; }
+div#left-column div.tooltip-content { display: none; position: absolute; padding: 10px; border: 1px solid black; background-color: white; }
+
+div#deploy-column { width: 76%; }
+
+div#deploy-column fieldset { border: 1px solid #ccc }
+div#deploy-column p.bottom > span { color: #cc0000; font-weight: bold; margin-right: 5px; }
+
+div#deploy-column div#deploy-column-left-column { width: 50%; float: left; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p { line-height: 25px; clear: both; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > label { float: left; width: 120px; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > label > span { color: #cc0000; font-weight: bold; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > input { float: left; width: 300px; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > select { float: left; width: 300px; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > input.radio { float: none; width: 20px; }
+
+div#deploy-column div#deploy-column-rigth-column { width: 50%; float: left; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p { line-height: 25px; clear: both; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > label { float: left; width: 120px; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > label > span { color: #cc0000; font-weight: bold; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > input { float: left; width: 300px; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > select { float: left; width: 300px; }
+div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > input.radio { float: none; width: 20px; }
+
+button {
+	width: 100%;
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	color: #666666;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+	font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.darkmagic { clear: both; }

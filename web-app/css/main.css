@@ -1,7 +1,7 @@
 body {
     background: #fff;
     color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
+    font: 13px 'Cabin';
 }
 
 a:link, a:visited, a:hover {
@@ -12,25 +12,15 @@ a:link, a:visited, a:hover {
 
 h1 {
     color: #48802c;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 16px;
-    margin: .8em 0 .3em 0;
-}
-
-ul {
-    padding-left: 15px;
 }
 
 input, select, textarea {
     background-color: #fcfcfc;
     border: 1px solid #ccc;
-    font: 11px verdana, arial, helvetica, sans-serif;
-    margin: 2px 0;
-    padding: 2px 4px;
 }
-select {
-   padding: 2px 2px 2px 0;
-}
+
 textarea {
 	width: 250px;
 	height: 150px;
@@ -40,13 +30,6 @@ textarea {
 input:focus, select:focus, textarea:focus {
     border: 1px solid #b2d1ff;
 }
-
-.body {
-    float: left;
-    margin: 0 15px 10px 15px;
-}
-
-/* NAVIGATION MENU */
 
 .nav {
     background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
@@ -254,16 +237,4 @@ th.desc a {
 .buttons input.save {
     background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
     padding-left: 28px;
-}
-
-
-
-
-/*******/
-.tooltip-content {
-	display: none;        /* required */
-	position: absolute;   /* required */
-	padding: 10px;
-	border: 1px solid black;
-	background-color: white;
 }
