@@ -6,7 +6,7 @@
 	<body>
 		
 		<div id="pageBody">
-            <h1>Application: ${app.name}</h1>
+            <h1>${app.name}</h1>
         	<br />
 			<g:each in="${runningInstances}" var="${instance}" status="stts">
 				<div id="instance-target-${stts}" class="tooltip-target">${instance.instanceId}</div>

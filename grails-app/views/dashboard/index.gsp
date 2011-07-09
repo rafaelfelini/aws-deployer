@@ -8,7 +8,7 @@
 		<div id="pageBody">
             <h1>Select the application</h1>
         
-			<g:form controller="deploy" action="dashboard">
+			<g:form controller="dashboard" action="load">
 			
 				<p>
 					<label>Access Key: </label>
@@ -20,7 +20,7 @@
 				</p>
 				<p>
 					<label>Application: </label>
-					<select name="app.id">
+					<select name="app.name">
 						<g:each in="${apps}" var="app">
 							<option value="${app.name}">${app.name}</option>
 						</g:each>

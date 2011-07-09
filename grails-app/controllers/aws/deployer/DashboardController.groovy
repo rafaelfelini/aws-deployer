@@ -14,8 +14,10 @@ class DashboardController {
 		session.accessKey = params.accessKey
 		session.secretKey = params.secretKey
 
-		def app = Application.get(params.app.name)
+		def app = Application.findByName(params.app.name)		
 		def runningInstances = awsService.applicationInstances(app.name)
+		
+		session.app = app
 
 		[app: app, runningInstances: runningInstances]
 	}
