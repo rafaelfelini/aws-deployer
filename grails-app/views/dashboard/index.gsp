@@ -22,7 +22,7 @@
 					<label>Application: </label>
 					<select name="app.id">
 						<g:each in="${apps}" var="app">
-							<option value="${app.id}">${app.name}</option>
+							<option value="${app.name}">${app.name}</option>
 						</g:each>
 					</select>		
 				</p>
