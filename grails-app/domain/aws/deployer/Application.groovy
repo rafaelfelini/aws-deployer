@@ -7,7 +7,6 @@ class Application implements Serializable {
 	String keyName
 	String imageId
 	String instanceType
-	Integer instances
 	
 	String elb
 	String securityGroups

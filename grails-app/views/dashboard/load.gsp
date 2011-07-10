@@ -54,10 +54,6 @@
 								<input name="keyName" type="text" value="${app.keyName}" readonly />
 							</p>
 							<p>
-								<label>Instances</label>
-								<input name="instances" type="text" value="${app.instances}" />
-							</p>
-							<p>
 								<label>Type</label>
 								<select name="instanceType">
 									<optgroup label="Micro Instances">
