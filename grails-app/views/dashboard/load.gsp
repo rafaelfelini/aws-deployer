@@ -3,6 +3,8 @@
 		<title>Dashboard: ${app.name}</title>
 		<meta name="layout" content="deployer" />
         <link rel="stylesheet" href="${resource(dir:'css',file:'dashboard.css')}" />
+		<script src="${resource(dir:'js',file:'jquery.numeric.js')}"></script>
+		<script src="${resource(dir:'js',file:'jquery.ezpz_tooltip.min.js')}"></script>
 	</head>
 	<body>
 		
@@ -101,7 +103,7 @@
 							<g:each in="${availabilityZones}" var="az">
 								<p>
 									<label style="padding-left: 10px">${az}</label>
-									<input type="text" name="ammt_${az}" />
+									<input class="numeric" type="text" name="ammt_${az}" value="0" />
 								</p>
 							</g:each>
 							
@@ -154,6 +156,7 @@
 				
 		<script>
 			$(document).ready(function(){
+				$(".numeric").numeric();
 				$(".tooltip-target").ezpz_tooltip();
 			});
 		</script>

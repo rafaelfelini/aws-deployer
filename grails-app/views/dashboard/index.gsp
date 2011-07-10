@@ -12,6 +12,13 @@
 			<g:form controller="dashboard" action="load">
 			
 				<fieldset>
+			
+					<g:if test="${flash.message}">
+						<div id="message">
+							${flash.message}
+						</div>
+					</g:if>
+			
 					<p>
 						<label>Application: </label>
 						<select name="app.name">

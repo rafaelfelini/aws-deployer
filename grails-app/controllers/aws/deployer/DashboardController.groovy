@@ -19,12 +19,22 @@ class DashboardController {
 
     def load = {
 	
-		session.accessKey  = params.accessKey
-		session.secretKey  = params.secretKey
-		session.region     = params.region
+		def accessKey = params.accessKey
+		def secretKey = params.secretKey
+		def region    = params.region
+		def appName   = params.app.name
+		
+		if (!region || !accessKey || !secretKey || !appName) {
+			flash.message = "Fill in you credentials"
+			redirect controller: "dashboard", action: "index"
+		}
+	
+		session.accessKey  = accessKey
+		session.secretKey  = secretKey
+		session.region     = region
 		session.regionName = awsService.getRegionName(params.region)
 
-		def app = Application.findByName(params.app.name)		
+		def app = Application.findByName(appName)		
 		def runningInstances = awsService.applicationInstances(app.name)
 		def availabilityZones = awsService.getAvailabilityZones()
 		
