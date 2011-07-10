@@ -92,6 +92,17 @@
 								<input class="radio" type="radio" name="behaviour" value="replace" checked />Replace
 								<input class="radio" type="radio" name="behaviour" value="keep" />Keep
 							</p>
+							<p>
+								<label class="az">Instances to launch (per availability zone)</label>
+							</p>
+							
+							<g:each in="${availabilityZones}" var="az">
+								<p>
+									<label>AZ ${az}</label>
+									<input type="text" name="ammt_${az}" />
+								</p>
+							</g:each>
+							
 
 						</div>
 						<div id="deploy-column-rigth-column">

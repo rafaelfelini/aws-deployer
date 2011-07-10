@@ -18,6 +18,7 @@ div#deploy-column p.bottom > span { color: #cc0000; font-weight: bold; margin-ri
 div#deploy-column div#deploy-column-left-column { width: 50%; float: left; }
 div#deploy-column form > fieldset > div#deploy-column-left-column > p { line-height: 25px; clear: both; }
 div#deploy-column form > fieldset > div#deploy-column-left-column > p > label { float: left; width: 120px; }
+div#deploy-column form > fieldset > div#deploy-column-left-column > p > label.az { width: 300px; }
 div#deploy-column form > fieldset > div#deploy-column-left-column > p > label > span { color: #cc0000; font-weight: bold; }
 div#deploy-column form > fieldset > div#deploy-column-left-column > p > input { float: left; width: 300px; }
 div#deploy-column form > fieldset > div#deploy-column-left-column > p > select { float: left; width: 300px; }

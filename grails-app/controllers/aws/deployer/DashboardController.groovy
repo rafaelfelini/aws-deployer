@@ -16,9 +16,10 @@ class DashboardController {
 
 		def app = Application.findByName(params.app.name)		
 		def runningInstances = awsService.applicationInstances(app.name)
+		def availabilityZones = awsService.getAvailabilityZones()
 		
 		session.app = app
 
-		[app: app, runningInstances: runningInstances]
+		[app: app, runningInstances: runningInstances, availabilityZones: availabilityZones]
 	}
 }

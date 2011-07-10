@@ -5,6 +5,8 @@ import com.amazonaws.services.ec2.model.Filter
 import com.amazonaws.services.ec2.AmazonEC2Client
 import com.amazonaws.services.ec2.model.DescribeInstancesResult
 import com.amazonaws.services.ec2.model.DescribeInstancesRequest
+import com.amazonaws.services.ec2.model.DescribeAvailabilityZonesResult
+import com.amazonaws.services.ec2.model.DescribeAvailabilityZonesRequest
 
 import org.springframework.web.context.request.RequestContextHolder
 
@@ -61,6 +63,12 @@ class AwsService {
 		}
 		
 		return instances
+	}
+	
+	def getAvailabilityZones() {
+		
+		def describeAvailabilityZonesResult = ec2Client().describeAvailabilityZones() 
+		return describeAvailabilityZonesResult.availabilityZones.collect { it.zoneName }
 	}
 	
 }
