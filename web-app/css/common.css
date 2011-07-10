@@ -1,34 +1,8 @@
-body {
-    background: #fff;
-    color: #333;
-    font: 13px 'Cabin';
-}
-
-a:link, a:visited, a:hover {
-    color: #666;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-h1 {
-    color: #48802c;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-input, select, textarea {
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
-}
-
-textarea {
-	width: 250px;
-	height: 150px;
-	vertical-align: top;
-}
-
-input:focus, select:focus, textarea:focus {
-    border: 1px solid #b2d1ff;
-}
-
+body { background: #fff; color: #333; font: 13px 'Cabin'; }
+h1 { color: #48802c; font-weight: bold; font-size: 16px; }
+textarea { width: 250px; height: 150px; vertical-align: top; }
+input, select, textarea { background-color: #fcfcfc; border: 1px solid #ccc; }
+input:focus, select:focus, textarea:focus { border: 1px solid #b2d1ff; }
+a:link, a:visited, a:hover { color: #666; font-weight: bold; text-decoration: none; }
 button { width: 100%; background: #fff url(../images/skin/shadow.jpg) bottom repeat-x; color: #666666; font-size: 10px; margin-top: 5px; overflow: hidden; font-weight: bold; padding-top: 4px; padding-bottom: 4px; }
+.darkmagic { clear: both; }

@@ -36,12 +36,7 @@
 				<div class="title">Deploy this application</div>
 				
 				<form>
-					
-					<fieldset>
-						<legend>Application details</legend>
-					</fieldset>
-					<br />
-					
+										
 					<fieldset>
 						<legend>Instance details</legend>
 
@@ -137,10 +132,37 @@
 								<input name="jvmargs" type="text" value="${app.jvmargs}" />
 							</p>
 							
+							<br class="darkmagic">
+							<br />
+							
+							<fieldset id="application">
+								<legend>Application repository details</legend>
+								<p>
+									<label>Protocol</label>
+									<select id="protocol" name="protocol">
+										<option value="http">http (regular http download)</option>
+									</select>
+								</p>
+								<p>
+									<label>URL</label>
+									<input type="text" id="url" name="url" class="appurl" />
+								</p>
+								<p>
+									<label>User</label>
+									<input type="text" id="user" name="user" class="appurl" />
+								</p>
+								<p>
+									<label>Password</label>
+									<input type="text" id="pass" name="pass" class="appurl" />
+								</p>
+								<p>
+									<span id="appurl-address">http://</span>
+								</p>
+
+							</fieldset>
+							
 						</div>
-						
-						<br class="darkmagic">
-						
+												
 						<p>
 							<button type="submit">start deployment process</button>
 						</p>
@@ -150,7 +172,7 @@
 				<p class="bottom">
 					<span>*</span> You can change in the application configuration.
 				</p>
-			</div>
+			</div>		
 			
 		</div>
 				
@@ -158,6 +180,24 @@
 			$(document).ready(function(){
 				$(".numeric").numeric();
 				$(".tooltip-target").ezpz_tooltip();
+				
+				$(".appurl").keyup(function() {
+
+					var protocol = $("#protocol").val();
+					var user = $("#user").val();
+					var pass = $("#pass").val();
+					var url = $("#url").val();
+
+					var fullUrl = protocol + "://";
+					
+					if (user || pass) {
+						fullUrl += user + ":" + pass + "@";
+					}
+					
+					fullUrl += url;
+					
+					$("#appurl-address").html(fullUrl);
+				});
 			});
 		</script>
 		
