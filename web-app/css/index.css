@@ -1,0 +1,4 @@
+div#index > form > fieldset { text-align: left; width: 300px; border: 1px solid #aaa; }
+div#index > form > fieldset > p > label { width: 90px; float: left; }
+div#index > form > fieldset > p > input { width: 200px; }
+div#index > form > fieldset > p > select { width: 200px; }

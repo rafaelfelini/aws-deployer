@@ -1,5 +1,5 @@
-div#pageBody h1 { background-color: #48802c; color: #ffffff; text-align: center; padding-top: 5px; padding-bottom: 5px; font-size: 22px; text-transform: uppercase; }
-div#pageBody h2 { color: #666; text-align: center; padding-top: 5px; padding-bottom: 5px; font-size: 16px; }
+div#dashboard h1 { background-color: #48802c; color: #ffffff; text-align: center; padding-top: 5px; padding-bottom: 5px; font-size: 22px; text-transform: uppercase; }
+div#dashboard h2 { color: #666; text-align: center; padding-top: 5px; padding-bottom: 5px; font-size: 16px; }
 
 div.column { border: 1px solid #ccc; margin-top: 5px; padding: 5px; float: left; margin-right: 5px; }
 div.column div.title { font-size: 16px; margin-bottom: 10px; border-bottom: 1px solid #ccc; text-align: center; background-color: #aaa; color: #fff; padding-top: 4px; padding-bottom: 4px;}
@@ -32,17 +32,5 @@ div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > label >
 div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > input { float: left; width: 300px; }
 div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > select { float: left; width: 300px; }
 div#deploy-column form > fieldset > div#deploy-column-rigth-column > p > input.radio { float: none; width: 20px; }
-
-button {
-	width: 100%;
-	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-	color: #666666;
-    font-size: 10px;
-    margin-top: 5px;
-    overflow: hidden;
-	font-weight: bold;
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
 
 .darkmagic { clear: both; }

@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		
-		<div id="pageBody">
+		<div id="dashboard">
             <h1>${app.name}</h1>
 			<h2>${session.regionName} (${session.region})</h2>
 
