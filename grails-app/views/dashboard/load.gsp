@@ -8,20 +8,26 @@
 		
 		<div id="pageBody">
             <h1>${app.name}</h1>
+			<h2>${session.regionName} (${session.region})</h2>
 
 			<div id="left-column" class="column">
 				<div class="title">Running Instances</div>
-				<g:each in="${runningInstances}" var="${instance}" status="stts">
-					<div class="instance-details">
-						<span id="instance-target-${stts}" class="tooltip-target">
-							<img src="${resource(dir:'images/skin', file:'information.png')}" />
-						</span>
-						${instance.instanceId}
-					</div>
-					<div id="instance-content-${stts}" class="tooltip-content">
-						<g:render template="instance-details" model="${[instance: instance]}" />
-					</div>
-				</g:each>
+				<g:if test="${runningInstances}">
+					<g:each in="${runningInstances}" var="${instance}" status="stts">
+						<div class="instance-details">
+							<span id="instance-target-${stts}" class="tooltip-target">
+								<img src="${resource(dir:'images/skin', file:'information.png')}" />
+							</span>
+							${instance.instanceId}
+						</div>
+						<div id="instance-content-${stts}" class="tooltip-content">
+							<g:render template="instance-details" model="${[instance: instance]}" />
+						</div>
+					</g:each>
+				</g:if>
+				<g:else>
+					No instances running for this application in this region.
+				</g:else>
 			</div>
 			
 			<div id="deploy-column" class="column last">
@@ -98,7 +104,7 @@
 							
 							<g:each in="${availabilityZones}" var="az">
 								<p>
-									<label>AZ ${az}</label>
+									<label style="padding-left: 10px">${az}</label>
 									<input type="text" name="ammt_${az}" />
 								</p>
 							</g:each>

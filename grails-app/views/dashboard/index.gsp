@@ -27,6 +27,14 @@
 					</select>		
 				</p>
 				<p>
+					<label>AWS Region: </label>
+					<select name="region">
+						<g:each in="${regions}" var="region">
+							<option value="${region.code}">${region.name}</option>
+						</g:each>
+					</select>		
+				</p>
+				<p>
 					<input type="submit" value="continue" />
 				</p>
 
