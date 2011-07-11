@@ -14,6 +14,11 @@
 
 			<div id="left-column" class="column">
 				<div class="title">Running Instances</div>
+				
+				<p id="instanceDetailsInstructions">
+					The deployer looks for instances with a tag named <strong>app-name</strong> and value <strong>${app.name}</strong>
+				</p>
+				
 				<g:if test="${runningInstances}">
 					<g:each in="${runningInstances}" var="${instance}" status="stts">
 						<div class="instance-details">
@@ -30,13 +35,14 @@
 				<g:else>
 					No instances running for this application in this region.
 				</g:else>
+								
 			</div>
 			
 			<div id="deploy-column" class="column last">
 				<div class="title">Deploy this application</div>
 				
-				<form>
-										
+				<g:form controller="dashboard" action="deploy">
+					<input type="hidden" name="app.name" value="${app.name}" />
 					<fieldset>
 						<legend>Instance details</legend>
 
@@ -168,15 +174,18 @@
 						</p>
 					</fieldset>
 					
-				</form>
+				</g:form>
 				<p class="bottom">
 					<span>*</span> You can change in the application configuration.
 				</p>
-			</div>		
-			
+			</div>
+						
 		</div>
-				
+		
+		<br class="darkmagic" />
+								
 		<script>
+				
 			$(document).ready(function(){
 				$(".numeric").numeric();
 				$(".tooltip-target").ezpz_tooltip();

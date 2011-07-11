@@ -1,5 +1,7 @@
 package aws.deployer
 
+import javax.servlet.ServletOutputStream
+
 class DashboardController {
 	
 	def awsService
@@ -41,5 +43,17 @@ class DashboardController {
 		session.app = app
 
 		[app: app, runningInstances: runningInstances, availabilityZones: availabilityZones]
+	}
+	
+	def deploy = {
+		
+		def app = Application.findByName(params.app.name)
+		
+		def azs = []
+		azs << [name: "us-east-1a", instances: [[instanceId:'a1'], [instanceId:'a2'], [instanceId:'a3'], [instanceId:'a4'], [instanceId:'a5']]]
+		azs << [name: "us-east-1b", instances: [[instanceId:'b1'], [instanceId:'b2'], [instanceId:'b3'], [instanceId:'b4'], [instanceId:'b5']]]
+		azs << [name: "us-east-1c", instances: [[instanceId:'c1'], [instanceId:'c2'], [instanceId:'c3'], [instanceId:'c4'], [instanceId:'c5']]]
+		
+		[app: app, azs: azs]
 	}
 }
