@@ -21,7 +21,7 @@
 				<g:each in="${azs}" var="az">				
 					<g:each in="${az.instances}" var="instance">
 						<g:set var="totalRows" value="${totalRows + 1}" />
-						<tr class="${totalRows % 2 == 0 ? 'odd' : 'even'}">
+						<tr id="tr-status-${instance.instanceId}" class="${totalRows % 2 == 0 ? 'odd' : 'even'}">
 							<td>${az.name}</td>
 							<td>${instance.instanceId}</td>
 							<td class="starting" id="td-status-${instance.instanceId}">starting...</td>
