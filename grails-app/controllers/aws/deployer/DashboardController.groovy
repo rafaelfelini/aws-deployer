@@ -50,9 +50,9 @@ class DashboardController {
 		def app = Application.findByName(params.app.name)
 		
 		def azs = []
-		azs << [name: "us-east-1a", instances: [[instanceId:'a1'], [instanceId:'a2'], [instanceId:'a3'], [instanceId:'a4'], [instanceId:'a5']]]
-		azs << [name: "us-east-1b", instances: [[instanceId:'b1'], [instanceId:'b2'], [instanceId:'b3'], [instanceId:'b4'], [instanceId:'b5']]]
-		azs << [name: "us-east-1c", instances: [[instanceId:'c1'], [instanceId:'c2'], [instanceId:'c3'], [instanceId:'c4'], [instanceId:'c5']]]
+		azs << [name: "us-east-1a", instances: [[instanceId:'a1', publicDnsName: 'ec2.34.1827-a1.amazonaws.com'], [instanceId:'a2', publicDnsName: 'ec2.34.1827-a2.amazonaws.com'], [instanceId:'a3', publicDnsName: 'ec2.34.1827-a3.amazonaws.com'], [instanceId:'a4', publicDnsName: 'ec2.34.1827-a4.amazonaws.com'], [instanceId:'a5', publicDnsName: 'ec2.34.1827-a5.amazonaws.com']]]
+		azs << [name: "us-east-1b", instances: [[instanceId:'b1', publicDnsName: 'ec2.34.1827-b1.amazonaws.com'], [instanceId:'b2', publicDnsName: 'ec2.34.1827-b2.amazonaws.com'], [instanceId:'b3', publicDnsName: 'ec2.34.1827-b3.amazonaws.com'], [instanceId:'b4', publicDnsName: 'ec2.34.1827-b4.amazonaws.com'], [instanceId:'b5', publicDnsName: 'ec2.34.1827-b5.amazonaws.com']]]
+		azs << [name: "us-east-1c", instances: [[instanceId:'c1', publicDnsName: 'ec2.34.1827-c1.amazonaws.com'], [instanceId:'c2', publicDnsName: 'ec2.34.1827-c2.amazonaws.com'], [instanceId:'c3', publicDnsName: 'ec2.34.1827-c3.amazonaws.com'], [instanceId:'c4', publicDnsName: 'ec2.34.1827-c4.amazonaws.com'], [instanceId:'c5', publicDnsName: 'ec2.34.1827-c5.amazonaws.com']]]
 		
 		[app: app, azs: azs]
 	}

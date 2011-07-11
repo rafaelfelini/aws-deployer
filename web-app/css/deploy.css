@@ -6,10 +6,12 @@ div#deploy table { border: 1px solid #ccc; width: 100% }
 div#deploy table tr { border: 0; }
 div#deploy table th { font: 11px verdana, arial, helvetica, sans-serif; line-height: 12px; padding: 5px 6px; text-align: left; vertical-align: top; }
 div#deploy table td { font: 11px verdana, arial, helvetica, sans-serif; line-height: 12px; padding: 5px 6px; text-align: left; vertical-align: top; }
-div#deploy table th { background: #fff url(../images/skin/shadow.jpg); color: #666; font-size: 11px; font-weight: bold; line-height: 17px; padding: 2px 6px; }
+div#deploy table th { background: #fff url(../images/skin/shadow.jpg); color: #666; font-size: 11px; font-weight: bold; line-height: 17px; padding: 2px 6px; width: 25%;}
 div#deploy table th a:link, th a:visited, th a:hover { color: #333; display: block; font-size: 10px; text-decoration: none; width: 100%; }
 div#deploy table th.asc a, th.desc a { background-position: right; background-repeat: no-repeat; }
 div#deploy table tr.odd { background: #f7f7f7; }
 div#deploy table tr.even { background: #fff; }
-div#deploy table td.starting { color: #990000; }
-div#deploy table td.running { color: #009900; }
+
+div#deploy table td.starting { text-transform: uppercase; color: #990000; }
+div#deploy table td.initializing { text-transform: uppercase; color: #000099; }
+div#deploy table td.running { text-transform: uppercase; color: #009900; }

@@ -15,6 +15,7 @@
 				<tr>
 					<th>Availability Zone</th>
 					<th>Instance Id</th>
+					<th>Public DNS</th>
 					<th>Status</th>
 				</tr>
 				<g:set var="totalRows" value="${0}" />
@@ -24,6 +25,7 @@
 						<tr id="tr-status-${instance.instanceId}" class="${totalRows % 2 == 0 ? 'odd' : 'even'}">
 							<td>${az.name}</td>
 							<td>${instance.instanceId}</td>
+							<td>${instance.publicDnsName}</td>
 							<td class="starting" id="td-status-${instance.instanceId}">starting...</td>
 						</tr>
 					</g:each>				
